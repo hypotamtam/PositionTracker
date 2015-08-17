@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWw-bc-HGp">
+                                <rect key="frame" x="16" y="36" width="568" height="502"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="bsE-PH-Eot"/>
+                                </connections>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tBY-jH-gkf">
+                                <rect key="frame" x="16" y="554" width="568" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VtR-uf-1vm">
+                                        <rect key="frame" x="0.0" y="0.0" width="189.5" height="30"/>
+                                        <state key="normal" title="Email log">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didEmailLogTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RcZ-oH-cBB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wof-Pt-w1N">
+                                        <rect key="frame" x="189.5" y="0.0" width="189" height="30"/>
+                                        <state key="normal" title="Clear log">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didClearLogTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CNe-jS-xet"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9U5-j8-aFN">
+                                        <rect key="frame" x="378.5" y="0.0" width="189.5" height="30"/>
+                                        <state key="normal" title="Log debug info">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didLogDebugInfoTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kFH-9e-gYd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="VtR-uf-1vm" firstAttribute="leading" secondItem="tBY-jH-gkf" secondAttribute="leading" id="04u-cq-7Tf"/>
+                                    <constraint firstItem="VtR-uf-1vm" firstAttribute="top" secondItem="tBY-jH-gkf" secondAttribute="top" id="3Ns-YZ-U42"/>
+                                    <constraint firstAttribute="bottom" secondItem="Wof-Pt-w1N" secondAttribute="bottom" id="ClB-Us-bbP"/>
+                                    <constraint firstAttribute="bottom" secondItem="VtR-uf-1vm" secondAttribute="bottom" id="FOw-g0-1EQ"/>
+                                    <constraint firstItem="Wof-Pt-w1N" firstAttribute="top" secondItem="tBY-jH-gkf" secondAttribute="top" id="Hfd-hS-l71"/>
+                                    <constraint firstItem="Wof-Pt-w1N" firstAttribute="leading" secondItem="VtR-uf-1vm" secondAttribute="trailing" id="ROi-7W-58V"/>
+                                    <constraint firstItem="VtR-uf-1vm" firstAttribute="width" secondItem="Wof-Pt-w1N" secondAttribute="width" id="Xpr-dc-qjX"/>
+                                    <constraint firstItem="9U5-j8-aFN" firstAttribute="leading" secondItem="Wof-Pt-w1N" secondAttribute="trailing" id="XvR-ye-ZUZ"/>
+                                    <constraint firstItem="9U5-j8-aFN" firstAttribute="width" secondItem="VtR-uf-1vm" secondAttribute="width" id="ZCF-Xu-9Xk"/>
+                                    <constraint firstAttribute="bottom" secondItem="9U5-j8-aFN" secondAttribute="bottom" id="ZXs-Jq-4px"/>
+                                    <constraint firstAttribute="trailing" secondItem="9U5-j8-aFN" secondAttribute="trailing" id="q5E-Sg-pHK"/>
+                                    <constraint firstItem="9U5-j8-aFN" firstAttribute="top" secondItem="tBY-jH-gkf" secondAttribute="top" id="xpD-2e-yxs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="tBY-jH-gkf" secondAttribute="trailing" id="KC4-oM-B1M"/>
+                            <constraint firstItem="jWw-bc-HGp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="U2v-o4-xtr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jWw-bc-HGp" secondAttribute="trailing" id="lGk-Su-z1W"/>
+                            <constraint firstItem="tBY-jH-gkf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tPy-cO-CfE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tBY-jH-gkf" secondAttribute="bottom" constant="16" id="v00-Jo-T2i"/>
+                            <constraint firstItem="jWw-bc-HGp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="wry-oN-xcJ"/>
+                            <constraint firstItem="tBY-jH-gkf" firstAttribute="top" secondItem="jWw-bc-HGp" secondAttribute="bottom" constant="16" id="yXX-7c-Kcu"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="console" destination="jWw-bc-HGp" id="p1h-lO-u0p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
